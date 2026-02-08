@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using Serilog;
 using Versta.Store.Endpoints;
+using Versta.Store.Exceptions.Domain;
 using Versta.Store.Handlers.Order.Create;
 using Versta.Store.Handlers.Order.History;
 using Versta.Store.Infrastructure;
@@ -15,6 +16,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connect
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderHistoryHandler, OrderHistoryHandler>();
 builder.Services.AddScoped<ICreateOrderHandler, CreateOrderHandler>();
+
 
 builder.Services.AddCors(options =>
 {
@@ -31,6 +33,7 @@ builder.Host.UseSerilog((context, configuration) => { configuration.ReadFrom.Con
 builder.Services.AddOpenApi();
 builder.Services.AddProblemDetails();
 builder.Services.AddValidation();
+builder.Services.AddExceptionHandler<DomainExceptionHandler>();
 
 var app = builder.Build();
 
