@@ -1,0 +1,90 @@
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.create-order {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.create-order h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-form input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.order-form input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.order-form button {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.order-form button:hover {
+  background-color: #357abd;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.success {
+  margin-top: 12px;
+  color: green;
+  font-weight: bold;
+}
+
+.switch-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #4a90e2;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.switch-link:hover {
+  color: #357abd;
+}

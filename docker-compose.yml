@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: versta-postgres-container
+    restart: always
+    environment:
+      POSTGRES_USER: versta_user
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: versta_store
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data_versta_tz:/var/lib/postgresql/data
+      
+volumes:
+  pg_data_versta_tz:
